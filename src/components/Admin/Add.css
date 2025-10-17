@@ -1,0 +1,85 @@
+.addpost-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f3f4f6;
+    padding: 20px;
+  }
+  
+  .addpost-card {
+    background: #fff;
+    width: 90vw;            /* wider rectangle */
+    max-width: 1000px;     /* bigger max width */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .addpost-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1f2937;
+  }
+  
+  .addpost-table {
+    width: 100%;
+    border-collapse: separate;   /* allow spacing */
+    border-spacing: 0 15px;      /* space between rows */
+  }
+  
+  .addpost-table td {
+    padding: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .addpost-table label {
+    font-weight: 600;
+    color: #374151;
+    display: inline-block;
+    min-width: 160px;   /* more spacing between label & input */
+    font-size: 15px;
+  }
+  
+  .addpost-table input,
+  .addpost-table textarea,
+  .addpost-table select {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s ease-in-out;
+  }
+  
+  .addpost-table input:focus,
+  .addpost-table textarea:focus,
+  .addpost-table select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+  }
+  
+  .submit-cell {
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .addpost-table button {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .addpost-table button:hover {
+    background: #1e40af;
+  }
+  

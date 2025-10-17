@@ -1,0 +1,377 @@
+.blogs-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .blogs-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* 🔹 Top Actions */
+  .top-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    gap: 15px;
+    background: #f8fbff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .filter-bar,
+  .date-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-bar label,
+  .date-filter label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .filter-bar select,
+  .date-filter select,
+  .date-input {
+    padding: 8px 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+  }
+  
+  .filter-bar select:focus,
+  .date-filter select:focus,
+  .date-input:focus {
+    border-color: #1a73e8;
+  }
+  
+  .range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .add-blog-btn {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .add-blog-btn:hover {
+    background: #155ab6;
+  }
+  
+  /* 🔹 Blog Cards */
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+  }
+  
+  .blog-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 15px;
+  }
+  
+  .blog-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #222;
+  }
+  
+  .blog-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden;
+  }
+  
+  .blog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  
+  .blog-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    flex: 1;
+    margin: 3px;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .edit-btn {
+    background: #e0f0ff;
+    color: #1a73e8;
+  }
+  
+  .delete-btn {
+    background: #ffe4e4;
+    color: #d93025;
+  }
+  
+  .edit-btn:hover {
+    background: #cde4ff;
+  }
+  
+  .delete-btn:hover {
+    background: #ffcccc;
+  }
+  
+  .no-blogs {
+    text-align: center;
+    color: #777;
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  
+  /* 🔹 Responsive */
+  @media (max-width: 768px) {
+    .top-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .filter-bar,
+    .date-filter {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .add-blog-btn {
+      align-self: flex-start;
+    }
+  }
+  
+
+
+
+  /* Modal overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal > div, .modal h3, .modal ul, .modal button {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.modal button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+  backdrop-filter: blur(3px);
+}
+
+/* Modal Box */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 90%;
+  min-width: 25vw;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Titles */
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* Likes List */
+.likes-list, .comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.like-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.like-item:hover, .comment-item:hover {
+  background-color: #f8f8f8;
+}
+
+/* Avatar */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6ec1e4, #42a5f5, #1e88e5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+/* Like User */
+.like-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column; /* stack header and comment text */
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+
+.like-username, .comment-username {
+  font-weight: 600;
+  color: #222;
+  display: block;
+}
+
+.like-email {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.comment-text {
+  margin-left: 52px; /* aligns under avatar */
+  margin-top: 4px;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: block;
+}
+
+.no-likes, .no-comments {
+  text-align: center;
+  color: #777;
+  margin: 20px 0;
+}
+
+/* Close Button */
+.close-btn {
+  display: block;
+  margin: 15px auto 0;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: #d93838;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

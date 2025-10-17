@@ -1,0 +1,59 @@
+.user-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: white;
+  }
+  
+  .user-card {
+    background: rgb(255, 239, 239);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(155, 187, 255, 0.25);
+    text-align: center;
+    width: 360px;
+    border: 1.5px solid #dbeafe;
+  }
+  
+  .avatar-big {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #fff;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+  }
+  
+  .user-card h2 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+    font-weight: 600;
+  }
+  
+  .user-card p {
+    color: #334155;
+    margin: 6px 0;
+    font-size: 0.95rem;
+  }
+  
+  .back-btn {
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .back-btn:hover {
+    background: #1e40af;
+  }
+  

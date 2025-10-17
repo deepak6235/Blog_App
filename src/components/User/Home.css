@@ -1,0 +1,8 @@
+.like-btn {
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.like-btn.liked {
+  color: red;
+  transform: scale(1.1);
+}
