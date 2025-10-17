@@ -75,7 +75,8 @@ const Login = () => {
         localStorage.setItem("username", res.data.username);
         localStorage.setItem("id", res.data.id);
 
-        alert("Login successful!");
+
+        
 
         if (res.data.role === "admin") navigate("/admin-dash");
         else navigate("/user-dash");
